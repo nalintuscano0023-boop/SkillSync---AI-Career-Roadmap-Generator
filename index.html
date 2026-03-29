@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SkillSync – AI-powered career roadmap generator. Find your personalized learning path, track progress, and land your dream tech job faster." />
+  <meta property="og:title" content="SkillSync – AI Career Roadmap Generator" />
+  <meta property="og:description" content="Generate personalized tech career roadmaps powered by AI. Track skills, analyze gaps, and land your dream job." />
+  <title>SkillSync – AI Career Roadmap Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+</head>
+<body>
+  <div class="bg-particles" id="bgParticles"></div>
+  <div class="gradient-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="app-layout" id="appLayout">
+
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-wrap">
+          <div class="logo-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="20" fill="url(#logoGrad)"/>
+              <path d="M12 20l5 5 11-11" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                  <stop offset="0%" stop-color="#6366f1"/>
+                  <stop offset="100%" stop-color="#8b5cf6"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">SkillSync</span>
+            <span class="logo-tag">AI Career OS</span>
+          </div>
+        </div>
+        <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle Sidebar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav" role="navigation" aria-label="Main Navigation">
+        <div class="nav-section-label">MAIN MENU</div>
+        <ul class="nav-list">
+          <li><a href="#" class="nav-item active" data-section="dashboard" id="nav-dashboard">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            <span>Dashboard</span>
+            <span class="nav-badge" id="navDashBadge"></span>
+          </a></li>
+          <li><a href="#" class="nav-item" data-section="generate" id="nav-generate">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span>Generate Roadmap</span>
+          </a></li>
+          <li><a href="#" class="nav-item" data-section="progress" id="nav-progress">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span>Progress</span>
+            <span class="nav-dot pulse"></span>
+          </a></li>
+          <li><a href="#" class="nav-item" data-section="insights" id="nav-insights">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            <span>Insights</span>
+          </a></li>
+          <li><a href="#" class="nav-item" data-section="compare" id="nav-compare">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+            <span>Compare Careers</span>
+          </a></li>
+          <li><a href="#" class="nav-item" data-section="projects" id="nav-projects">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Projects</span>
+          </a></li>
+        </ul>
+
+        <div class="nav-section-label" style="margin-top:24px">TOOLS</div>
+        <ul class="nav-list">
+          <li><a href="#" class="nav-item" data-section="skillgraph" id="nav-skillgraph">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="6" y1="8" x2="6" y2="16"/><line x1="8" y1="18" x2="16" y2="18"/><line x1="18" y1="8" x2="18" y2="16"/><line x1="8" y1="8" x2="16" y2="16"/></svg>
+            <span>Skill Graph</span>
+          </a></li>
+          <li><a href="#" class="nav-item" data-section="chat" id="nav-chat">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            <span>AI Advisor</span>
+            <span class="nav-dot" style="background:#10b981"></span>
+          </a></li>
+        </ul>
+      </nav>
+
+      <div class="xp-section">
+        <div class="xp-header">
+          <span class="xp-label">XP Level</span>
+          <span class="xp-level" id="sidebarLevel">Beginner</span>
+        </div>
+        <div class="xp-bar-wrap">
+          <div class="xp-bar-fill" id="sidebarXPBar"></div>
+        </div>
+        <div class="xp-numbers">
+          <span id="sidebarXP">0 XP</span>
+          <span id="sidebarXPNext">500 XP</span>
+        </div>
+      </div>
+
+      <div class="sidebar-profile">
+        <div class="profile-avatar" id="profileAvatar">
+          <span id="profileInitial">A</span>
+          <div class="avatar-ring"></div>
+        </div>
+        <div class="profile-info">
+          <p class="profile-name" id="profileName">Alex Johnson</p>
+          <p class="profile-role" id="profileCareerLabel">Frontend Dev</p>
+        </div>
+        <button class="profile-edit" id="editProfileBtn" aria-label="Edit Profile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-content" id="mainContent">
+      <header class="top-header">
+        <div class="header-left">
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </button>
+          <div class="header-greeting">
+            <h1 id="greetingText">Good morning, Alex! 👋</h1>
+            <p id="greetingSubtext">Ready to level up your skills today?</p>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="header-stats">
+            <div class="hstat-item">
+              <span class="hstat-val" id="headerStreak">0🔥</span>
+              <span class="hstat-label">Streak</span>
+            </div>
+            <div class="hstat-divider"></div>
+            <div class="hstat-item">
+              <span class="hstat-val" id="headerXP">0</span>
+              <span class="hstat-label">XP Today</span>
+            </div>
+            <div class="hstat-divider"></div>
+            <div class="hstat-item">
+              <span class="hstat-val" id="headerBadges">0</span>
+              <span class="hstat-label">Badges</span>
+            </div>
+          </div>
+          <button class="btn-chat-toggle" id="chatToggleBtn" aria-label="Open AI Chat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            <span class="chat-online-dot"></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="sections-wrapper">
+
+        <section class="page-section active" id="section-dashboard">
+          <div class="stats-grid">
+            <div class="glass-card stat-card" id="readinessCard">
+              <div class="stat-card-bg"></div>
+              <div class="stat-card-icon" style="--icon-color:#6366f1">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div class="stat-card-content">
+                <p class="stat-label">Job Readiness Score</p>
+                <h2 class="stat-value" id="readinessScore">0%</h2>
+                <p class="stat-trend" id="readinessTrend">Start generating your roadmap</p>
+              </div>
+              <div class="circular-ring-mini" id="miniRing">
+                <svg viewBox="0 0 60 60">
+                  <circle cx="30" cy="30" r="24" fill="none" stroke="rgba(99,102,241,0.15)" stroke-width="4"/>
+                  <circle cx="30" cy="30" r="24" fill="none" stroke="#6366f1" stroke-width="4" stroke-linecap="round"
+                    stroke-dasharray="150.8" stroke-dashoffset="150.8" id="miniRingCircle" transform="rotate(-90 30 30)"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="glass-card stat-card" id="progressCard">
+              <div class="stat-card-bg" style="--bg-color:#10b981"></div>
+              <div class="stat-card-icon" style="--icon-color:#10b981">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div class="stat-card-content">
+                <p class="stat-label">Roadmap Progress</p>
+                <h2 class="stat-value" id="progressPct">0%</h2>
+                <p class="stat-trend" id="progressTrend">0 of 0 steps completed</p>
+              </div>
+              <div class="stat-mini-bar-wrap">
+                <div class="stat-mini-bar" id="statMiniBar"></div>
+              </div>
+            </div>
+
+            <div class="glass-card stat-card" id="careerCard">
+              <div class="stat-card-bg" style="--bg-color:#f59e0b"></div>
+              <div class="stat-card-icon" style="--icon-color:#f59e0b">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+              </div>
+              <div class="stat-card-content">
+                <p class="stat-label">Active Career Path</p>
+                <h2 class="stat-value career-val" id="activeCareer">None</h2>
+                <p class="stat-trend" id="careerLevel">Select a career to begin</p>
+              </div>
+            </div>
+
+            <div class="glass-card stat-card" id="xpCard">
+              <div class="stat-card-bg" style="--bg-color:#8b5cf6"></div>
+              <div class="stat-card-icon" style="--icon-color:#8b5cf6">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="stat-card-content">
+                <p class="stat-label">Total XP Earned</p>
+                <h2 class="stat-value" id="totalXP">0</h2>
+                <p class="stat-trend" id="xpTrend">Keep completing steps!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="insight-banner" id="insightBanner">
+            <div class="insight-icon">💡</div>
+            <div class="insight-text">
+              <strong>Quick Tip:</strong> Generate your roadmap to get personalized career guidance and track your progress.
+            </div>
+            <button class="insight-cta" id="insightCtaBtn">Generate Now →</button>
+          </div>
+
+          <div class="section-header">
+            <h2 class="section-title">🏆 Achievements</h2>
+            <span class="section-count" id="badgeCount">0 earned</span>
+          </div>
+          <div class="badges-grid" id="badgesGrid">
+            </div>
+
+          <div class="section-header" style="margin-top:32px">
+            <h2 class="section-title">⚡ Recent Activity</h2>
+          </div>
+          <div class="activity-list" id="activityList">
+            <div class="activity-empty">
+              <div class="empty-icon">📋</div>
+              <p>No activity yet. Start by generating a roadmap!</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="page-section" id="section-generate">
+          <div class="section-hero">
+            <h2 class="section-hero-title">Generate Your <span class="gradient-text">Career Roadmap</span></h2>
+            <p class="section-hero-sub">Select your career goal and experience level to get a personalized, AI-powered learning path.</p>
+          </div>
+
+          <div class="generator-form glass-card">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="careerSelect">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                  Career Role
+                </label>
+                <div class="select-wrap">
+                  <select id="careerSelect" class="custom-select">
+                    <option value="">Choose your target role...</option>
+                    <option value="frontend">🌐 Frontend Developer</option>
+                    <option value="backend">⚙️ Backend Developer</option>
+                    <option value="datascience">📊 Data Scientist</option>
+                    <option value="devops">🔧 DevOps Engineer</option>
+                    <option value="fullstack">🚀 Full Stack Developer</option>
+                  </select>
+                  <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="levelSelect">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                  Experience Level
+                </label>
+                <div class="select-wrap">
+                  <select id="levelSelect" class="custom-select">
+                    <option value="">Select your level...</option>
+                    <option value="beginner">🌱 Beginner</option>
+                    <option value="intermediate">⚡ Intermediate</option>
+                    <option value="advanced">🔥 Advanced</option>
+                  </select>
+                  <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn-generate" id="generateBtn">
+                <span class="btn-generate-text">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                  Generate My Roadmap
+                </span>
+                <span class="btn-loader hidden">
+                  <svg class="spin-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="none"/><path d="M12 2a10 10 0 0110 10" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/></svg>
+                  Generating...
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="careers-preview" id="careersPreview">
+            
+          </div>
+
+          <div id="roadmapContainer" class="roadmap-container hidden">
+            <div class="roadmap-header">
+              <div class="roadmap-title-group">
+                <h3 class="roadmap-main-title" id="roadmapTitle">Your Roadmap</h3>
+                <span class="roadmap-badge" id="roadmapBadge">Beginner</span>
+              </div>
+              <div class="roadmap-actions">
+                <button class="btn-sm" id="resetRoadmapBtn">Reset Progress</button>
+              </div>
+            </div>
+            <div class="roadmap-timeline" id="roadmapTimeline">
+              
+            </div>
+          </div>
+        </section>
+
+        <section class="page-section" id="section-progress">
+          <div class="section-hero">
+            <h2 class="section-hero-title">Your <span class="gradient-text">Progress Dashboard</span></h2>
+            <p class="section-hero-sub">Track your skill development, readiness score, and growth over time.</p>
+          </div>
+
+          <div class="progress-layout">
+            <div class="progress-left">
+              <div class="glass-card score-card">
+                <h3 class="card-title">Job Readiness Score</h3>
+                <div class="circular-score-wrap">
+                  <div class="circular-score" id="circularScore">
+                    <svg viewBox="0 0 200 200" class="score-svg">
+                      <defs>
+                        <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#6366f1"/>
+                          <stop offset="100%" stop-color="#8b5cf6"/>
+                        </linearGradient>
+                      </defs>
+                      <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(99,102,241,0.1)" stroke-width="12"/>
+                      <circle cx="100" cy="100" r="80" fill="none" stroke="url(#scoreGrad)" stroke-width="12"
+                        stroke-linecap="round" stroke-dasharray="502.65" stroke-dashoffset="502.65"
+                        id="scoreCircle" transform="rotate(-90 100 100)"/>
+                    </svg>
+                    <div class="score-center">
+                      <span class="score-number" id="scoreNumber">0</span>
+                      <span class="score-pct">%</span>
+                      <span class="score-label-text" id="scoreLabelText">Not Started</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="score-insight" id="scoreInsight">
+                  <div class="insight-emoji" id="insightEmoji">🌱</div>
+                  <p id="insightMessage">Generate a roadmap to start tracking your job readiness score.</p>
+                </div>
+              </div>
+
+              <div class="glass-card skills-stats-card">
+                <h3 class="card-title">Skills Overview</h3>
+                <div class="skills-stat-grid">
+                  <div class="skills-stat-item">
+                    <span class="skills-stat-num" id="statCompleted">0</span>
+                    <span class="skills-stat-label">Completed</span>
+                  </div>
+                  <div class="skills-stat-item">
+                    <span class="skills-stat-num" id="statMissing">0</span>
+                    <span class="skills-stat-label">Missing</span>
+                  </div>
+                  <div class="skills-stat-item">
+                    <span class="skills-stat-num" id="statTotal">0</span>
+                    <span class="skills-stat-label">Total Required</span>
+                  </div>
+                  <div class="skills-stat-item">
+                    <span class="skills-stat-num" id="statSteps">0</span>
+                    <span class="skills-stat-label">Steps Done</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress-right">
+              <div class="glass-card chart-card">
+                <h3 class="card-title">Skills Distribution</h3>
+                <div class="chart-wrap">
+                  <canvas id="skillsChart"></canvas>
+                </div>
+              </div>
+
+              <div class="glass-card progress-bars-card">
+                <h3 class="card-title">Step-by-Step Progress</h3>
+                <div class="progress-bars-list" id="progressBarsList">
+                  <div class="empty-state-sm">Generate a roadmap first to see progress bars.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card skill-gap-card" style="margin-top:32px">
+            <div class="card-header-row">
+              <h3 class="card-title">🔍 Skill Gap Analyzer</h3>
+              <span class="gap-badge" id="gapBadge">0 gaps found</span>
+            </div>
+            <p class="card-desc">Compare your completed skills vs required skills for your selected career path.</p>
+            <div class="skill-gap-grid" id="skillGapGrid">
+              <div class="empty-state-sm">Generate a roadmap to analyze your skill gaps.</div>
+            </div>
+            <div class="gap-suggestions" id="gapSuggestions"></div>
+          </div>
+        </section>
+
+        <section class="page-section" id="section-insights">
+          <div class="section-hero">
+            <h2 class="section-hero-title">AI-Powered <span class="gradient-text">Insights</span></h2>
+            <p class="section-hero-sub">Smart recommendations and data-driven career guidance tailored to your progress.</p>
+          </div>
+          <div class="insights-grid" id="insightsGrid">
+          </div>
+          <div class="gamification-section">
+            <div class="section-header">
+              <h2 class="section-title">🎮 Gamification Stats</h2>
+            </div>
+            <div class="gamification-cards" id="gamificationCards">
+            </div>
+          </div>
+        </section>
+
+        <section class="page-section" id="section-compare">
+          <div class="section-hero">
+            <h2 class="section-hero-title">Compare <span class="gradient-text">Career Paths</span></h2>
+            <p class="section-hero-sub">Side-by-side comparison of different tech career tracks to help you decide.</p>
+          </div>
+          <div class="compare-selectors glass-card">
+            <div class="compare-select-group">
+              <label class="form-label">Career A</label>
+              <div class="select-wrap">
+                <select id="compareA" class="custom-select">
+                  <option value="frontend">🌐 Frontend Developer</option>
+                  <option value="backend">⚙️ Backend Developer</option>
+                  <option value="datascience">📊 Data Scientist</option>
+                  <option value="devops">🔧 DevOps Engineer</option>
+                  <option value="fullstack">🚀 Full Stack Developer</option>
+                </select>
+                <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
+            <div class="compare-vs">VS</div>
+            <div class="compare-select-group">
+              <label class="form-label">Career B</label>
+              <div class="select-wrap">
+                <select id="compareB" class="custom-select">
+                  <option value="backend">⚙️ Backend Developer</option>
+                  <option value="frontend">🌐 Frontend Developer</option>
+                  <option value="datascience">📊 Data Scientist</option>
+                  <option value="devops">🔧 DevOps Engineer</option>
+                  <option value="fullstack">🚀 Full Stack Developer</option>
+                </select>
+                <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
+            <button class="btn-compare" id="compareBtn">Compare →</button>
+          </div>
+          <div class="compare-cards-grid" id="compareCardsGrid">
+          </div>
+        </section>
+
+        <section class="page-section" id="section-projects">
+          <div class="section-hero">
+            <h2 class="section-hero-title">Mini <span class="gradient-text">Project Ideas</span></h2>
+            <p class="section-hero-sub">Curated project ideas based on your career & level. Build real things, land real jobs.</p>
+          </div>
+          <div class="projects-filter" id="projectsFilter">
+            
+          </div>
+          <div class="projects-grid" id="projectsGrid">
+            <div class="empty-state-sm">Generate a roadmap first to see personalized project ideas.</div>
+          </div>
+        </section>
+
+        
+        <section class="page-section" id="section-skillgraph">
+          <div class="section-hero">
+            <h2 class="section-hero-title">Skill <span class="gradient-text">Dependency Graph</span></h2>
+            <p class="section-hero-sub">Visualize how skills connect and depend on each other in your learning journey.</p>
+          </div>
+          <div class="glass-card skill-graph-card">
+            <div class="skill-graph-controls">
+              <button class="sg-btn active" data-career="frontend" id="sgFrontend">Frontend</button>
+              <button class="sg-btn" data-career="backend" id="sgBackend">Backend</button>
+            </div>
+            <div class="skill-graph-canvas-wrap">
+              <svg id="skillGraphSVG" class="skill-graph-svg" viewBox="0 0 700 320" preserveAspectRatio="xMidYMid meet">
+                
+              </svg>
+            </div>
+            <div class="skill-graph-legend">
+              <div class="legend-item"><span class="legend-dot" style="background:#6366f1"></span>Core Skills</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#10b981"></span>Completed</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#f59e0b"></span>In Progress</div>
+              <div class="legend-item"><span class="legend-dot completed-check"></span>Mastered</div>
+            </div>
+          </div>
+        </section>
+
+        
+        <section class="page-section" id="section-chat">
+          <div class="section-hero">
+            <h2 class="section-hero-title">AI Career <span class="gradient-text">Advisor</span></h2>
+            <p class="section-hero-sub">Get personalized career advice, skill recommendations, and motivation — powered by AI.</p>
+          </div>
+          <div class="chat-layout">
+            <div class="glass-card chat-card">
+              <div class="chat-header">
+                <div class="chat-ai-avatar">
+                  <span>🤖</span>
+                  <div class="ai-online-ring"></div>
+                </div>
+                <div class="chat-ai-info">
+                  <span class="chat-ai-name">SkillSync AI</span>
+                  <span class="chat-ai-status">Online • Powered by intelligent responses</span>
+                </div>
+              </div>
+              <div class="chat-messages" id="chatMessages">
+                <div class="chat-msg ai-msg">
+                  <div class="msg-avatar">🤖</div>
+                  <div class="msg-bubble">
+                    <p>Hello! I'm your AI career advisor. I can help you with career path recommendations, skill gap analysis, and interview tips! What would you like to know? 👋</p>
+                    <span class="msg-time" id="chatInitTime"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="chat-quick-btns" id="chatQuickBtns">
+                <button class="quick-btn" data-msg="What skills should I focus on next?">What skills should I focus on?</button>
+                <button class="quick-btn" data-msg="How do I improve my job readiness score?">Improve readiness score</button>
+                <button class="quick-btn" data-msg="Give me career advice for my path">Career advice</button>
+                <button class="quick-btn" data-msg="What projects should I build?">Project recommendations</button>
+                <button class="quick-btn" data-msg="How long will it take to be job ready?">Time to job ready?</button>
+              </div>
+              <div class="chat-input-row">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Ask me anything about your career..." aria-label="Chat message input"/>
+                <button class="chat-send-btn" id="chatSendBtn" aria-label="Send message">
+                  <svg viewBox="0 0 24 24" fill="none"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chat-sidebar-info">
+              <div class="glass-card chat-info-card">
+                <h3 class="card-title">💬 Ask Me About</h3>
+                <ul class="chat-topics">
+                  <li>🎯 Career path planning</li>
+                  <li>📚 Learning resources</li>
+                  <li>⚡ Skill gap analysis</li>
+                  <li>🏆 Interview preparation</li>
+                  <li>💼 Portfolio building</li>
+                  <li>🚀 Job hunting tips</li>
+                  <li>💰 Salary negotiation</li>
+                  <li>🌐 Remote work tips</li>
+                </ul>
+              </div>
+              <div class="glass-card chat-context-card" id="chatContextCard">
+                <h3 class="card-title">📊 Your Context</h3>
+                <div class="context-items" id="chatContext">
+                  <div class="context-item">
+                    <span class="ctx-label">Career</span>
+                    <span class="ctx-val" id="ctxCareer">Not set</span>
+                  </div>
+                  <div class="context-item">
+                    <span class="ctx-label">Level</span>
+                    <span class="ctx-val" id="ctxLevel">Not set</span>
+                  </div>
+                  <div class="context-item">
+                    <span class="ctx-label">Readiness</span>
+                    <span class="ctx-val" id="ctxReadiness">0%</span>
+                  </div>
+                  <div class="context-item">
+                    <span class="ctx-label">XP</span>
+                    <span class="ctx-val" id="ctxXP">0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  
+  <div class="chat-float-panel" id="chatFloatPanel">
+    <div class="cfp-header">
+      <div class="cfp-ai-info">
+        <div class="cfp-avatar">🤖</div>
+        <div>
+          <p class="cfp-name">SkillSync AI</p>
+          <p class="cfp-status">● Online</p>
+        </div>
+      </div>
+      <button class="cfp-close" id="chatCloseBtn" aria-label="Close chat">×</button>
+    </div>
+    <div class="cfp-messages" id="cfpMessages">
+      <div class="cfp-msg ai">
+        <div class="cfp-bubble">Hey! Ask me anything about your career 🚀</div>
+      </div>
+    </div>
+    <div class="cfp-input-row">
+      <input type="text" class="cfp-input" id="cfpInput" placeholder="Ask anything..." aria-label="Float chat input"/>
+      <button class="cfp-send" id="cfpSendBtn">
+        <svg viewBox="0 0 24 24" fill="none"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="badge-popup" id="badgePopup">
+    <div class="badge-popup-inner">
+      <div class="badge-popup-icon" id="badgePopupIcon">🏆</div>
+      <div class="badge-popup-content">
+        <p class="badge-popup-label">Achievement Unlocked!</p>
+        <p class="badge-popup-name" id="badgePopupName">Badge Name</p>
+        <p class="badge-popup-desc" id="badgePopupDesc">Description</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="xp-popup" id="xpPopup">+50 XP ⚡</div>
+
+  
+  <div class="modal-overlay" id="profileModal">
+    <div class="modal-panel glass-card">
+      <div class="modal-header">
+        <h3>Edit Profile</h3>
+        <button class="modal-close" id="profileModalClose">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-input" id="profileNameInput" placeholder="Enter your name" value="Alex Johnson"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Avatar Color</label>
+          <div class="color-picker-row" id="colorPicker">
+            <button class="color-btn active" data-color="#6366f1" style="background:#6366f1" aria-label="Indigo"></button>
+            <button class="color-btn" data-color="#10b981" style="background:#10b981" aria-label="Green"></button>
+            <button class="color-btn" data-color="#f59e0b" style="background:#f59e0b" aria-label="Amber"></button>
+            <button class="color-btn" data-color="#ef4444" style="background:#ef4444" aria-label="Red"></button>
+            <button class="color-btn" data-color="#8b5cf6" style="background:#8b5cf6" aria-label="Purple"></button>
+            <button class="color-btn" data-color="#06b6d4" style="background:#06b6d4" aria-label="Cyan"></button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-sm" id="profileSaveBtn">Save Changes</button>
+        <button class="btn-sm btn-ghost" id="profileCancelBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

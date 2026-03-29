@@ -1,0 +1,404 @@
+{
+  "careers": {
+    "frontend": {
+      "title": "Frontend Developer",
+      "icon": "🌐",
+      "color": "#6366f1",
+      "difficulty": "Intermediate",
+      "avgSalary": "$85,000",
+      "timeToJob": "6-9 months",
+      "demandLevel": "Very High",
+      "levels": {
+        "beginner": {
+          "label": "Beginner",
+          "description": "Just starting your frontend journey",
+          "totalSkills": 12,
+          "roadmap": [
+            { "id": "fe-b-1", "step": 1, "title": "HTML Fundamentals", "description": "Learn HTML5 structure, semantic elements, forms, tables, and multimedia elements.", "duration": "1-2 weeks", "resources": ["MDN Web Docs", "freeCodeCamp", "W3Schools"], "skills": ["HTML5", "Semantic HTML", "Forms", "Accessibility"], "category": "Core" },
+            { "id": "fe-b-2", "step": 2, "title": "CSS Basics", "description": "Master CSS selectors, box model, flexbox, grid, and responsive design principles.", "duration": "2-3 weeks", "resources": ["CSS-Tricks", "Flexbox Froggy", "Grid Garden"], "skills": ["CSS3", "Flexbox", "Grid", "Responsive Design"], "category": "Core" },
+            { "id": "fe-b-3", "step": 3, "title": "JavaScript Essentials", "description": "Understand variables, functions, DOM manipulation, events, and ES6+ features.", "duration": "3-4 weeks", "resources": ["JavaScript.info", "Eloquent JavaScript", "MDN"], "skills": ["JavaScript", "DOM", "ES6+", "Events"], "category": "Core" },
+            { "id": "fe-b-4", "step": 4, "title": "Version Control with Git", "description": "Learn Git basics, branching, merging, pull requests, and GitHub workflow.", "duration": "1 week", "resources": ["Git Documentation", "GitHub Learning Lab", "Atlassian Git"], "skills": ["Git", "GitHub", "Version Control"], "category": "Tools" },
+            { "id": "fe-b-5", "step": 5, "title": "Responsive Web Design", "description": "Build mobile-first layouts using media queries, viewport units, and fluid typography.", "duration": "1-2 weeks", "resources": ["Responsive Web Design", "Bootstrap Docs"], "skills": ["Media Queries", "Mobile-First", "CSS Variables"], "category": "Design" },
+            { "id": "fe-b-6", "step": 6, "title": "Build First Projects", "description": "Create landing pages, portfolio site, and simple interactive apps to solidify knowledge.", "duration": "2-3 weeks", "resources": ["Frontend Mentor", "CSS Battle", "100 Days CSS"], "skills": ["Project Building", "Debugging", "Deployment"], "category": "Practice" }
+          ],
+          "requiredSkills": ["HTML5", "CSS3", "JavaScript", "Git", "Responsive Design", "Flexbox", "Grid", "DOM", "ES6+", "Debugging", "Semantic HTML", "Deployment"]
+        },
+        "intermediate": {
+          "label": "Intermediate",
+          "description": "Growing your frontend expertise",
+          "totalSkills": 16,
+          "roadmap": [
+            { "id": "fe-i-1", "step": 1, "title": "React.js Fundamentals", "description": "Master React components, props, state, hooks, and the virtual DOM concept.", "duration": "3-4 weeks", "resources": ["React Docs", "Scrimba React", "Kent C. Dodds Blog"], "skills": ["React", "Hooks", "Components", "JSX"], "category": "Framework" },
+            { "id": "fe-i-2", "step": 2, "title": "State Management", "description": "Learn Context API, Redux Toolkit, and Zustand for managing app-wide state.", "duration": "2-3 weeks", "resources": ["Redux Toolkit Docs", "Zustand GitHub", "React Context"], "skills": ["Redux", "Context API", "State Management"], "category": "Framework" },
+            { "id": "fe-i-3", "step": 3, "title": "APIs & Async JavaScript", "description": "Master fetch API, Axios, async/await, Promises, and REST API integration.", "duration": "2 weeks", "resources": ["MDN Fetch API", "Axios Docs", "REST API Tutorial"], "skills": ["REST APIs", "Fetch", "Axios", "Async/Await"], "category": "Core" },
+            { "id": "fe-i-4", "step": 4, "title": "CSS Frameworks & Preprocessors", "description": "Learn Tailwind CSS, SASS/SCSS, and CSS-in-JS solutions for scalable styling.", "duration": "2 weeks", "resources": ["Tailwind Docs", "SASS Guide", "Styled Components"], "skills": ["Tailwind CSS", "SASS", "CSS Modules"], "category": "Styling" },
+            { "id": "fe-i-5", "step": 5, "title": "Testing Fundamentals", "description": "Write unit tests with Jest, integration tests, and component tests with React Testing Library.", "duration": "2 weeks", "resources": ["Jest Docs", "Testing Library", "Vitest"], "skills": ["Jest", "Testing Library", "Unit Testing"], "category": "Quality" },
+            { "id": "fe-i-6", "step": 6, "title": "Performance Optimization", "description": "Learn lazy loading, code splitting, memoization, and Core Web Vitals optimization.", "duration": "1-2 weeks", "resources": ["Web.dev", "Lighthouse", "Chrome DevTools"], "skills": ["Performance", "Lazy Loading", "Memoization"], "category": "Advanced" },
+            { "id": "fe-i-7", "step": 7, "title": "Build Full Projects", "description": "Create a full-featured SPA with authentication, API integration, and deployment.", "duration": "3-4 weeks", "resources": ["Frontend Mentor", "Netlify", "Vercel"], "skills": ["Full Project", "Deployment", "CI/CD"], "category": "Practice" }
+          ],
+          "requiredSkills": ["React", "Redux", "REST APIs", "Tailwind CSS", "SASS", "TypeScript", "Jest", "Performance", "Webpack", "Lazy Loading", "Context API", "Hooks", "Async/Await", "Git", "Deployment", "Testing"]
+        },
+        "advanced": {
+          "label": "Advanced",
+          "description": "Becoming a senior frontend engineer",
+          "totalSkills": 20,
+          "roadmap": [
+            { "id": "fe-a-1", "step": 1, "title": "TypeScript Mastery", "description": "Deep dive into TypeScript, generics, decorators, advanced types, and TypeScript with React.", "duration": "2-3 weeks", "resources": ["TypeScript Docs", "Total TypeScript", "Matt Pocock"], "skills": ["TypeScript", "Generics", "Type Safety"], "category": "Language" },
+            { "id": "fe-a-2", "step": 2, "title": "Next.js & SSR/SSG", "description": "Master Next.js App Router, server components, SSR, SSG, ISR, and full-stack capabilities.", "duration": "3-4 weeks", "resources": ["Next.js Docs", "Lee Robinson Blog", "Vercel Learn"], "skills": ["Next.js", "SSR", "SSG", "App Router"], "category": "Framework" },
+            { "id": "fe-a-3", "step": 3, "title": "System Design for Frontend", "description": "Learn micro-frontends, design systems, monorepos, and scalable architecture patterns.", "duration": "2-3 weeks", "resources": ["Frontend System Design", "Turborepo", "Module Federation"], "skills": ["Micro-Frontend", "Design Systems", "Architecture"], "category": "Architecture" },
+            { "id": "fe-a-4", "step": 4, "title": "Advanced Performance", "description": "Master Core Web Vitals, streaming, PWA, service workers, and advanced caching strategies.", "duration": "2 weeks", "resources": ["web.dev", "PWA Documentation", "Workbox"], "skills": ["PWA", "Service Workers", "Core Web Vitals"], "category": "Performance" },
+            { "id": "fe-a-5", "step": 5, "title": "DevOps & CI/CD", "description": "Set up GitHub Actions, Docker basics, Vercel/Netlify deployments, and monitoring.", "duration": "2 weeks", "resources": ["GitHub Actions Docs", "Docker Beginner", "Vercel Docs"], "skills": ["CI/CD", "Docker", "GitHub Actions"], "category": "DevOps" },
+            { "id": "fe-a-6", "step": 6, "title": "Open Source & Leadership", "description": "Contribute to open source, mentor others, conduct code reviews, and lead technical decisions.", "duration": "Ongoing", "resources": ["Good First Issues", "GitHub Explore", "Open Source Guide"], "skills": ["Open Source", "Leadership", "Code Review"], "category": "Leadership" }
+          ],
+          "requiredSkills": ["TypeScript", "Next.js", "SSR", "SSG", "Micro-Frontend", "Design Systems", "PWA", "CI/CD", "GraphQL", "Docker", "Testing", "Performance", "Architecture", "Leadership", "Open Source", "Monorepo", "Webpack", "Core Web Vitals", "Service Workers", "Code Review"]
+        }
+      }
+    },
+    "backend": {
+      "title": "Backend Developer",
+      "icon": "⚙️",
+      "color": "#10b981",
+      "difficulty": "Intermediate-Hard",
+      "avgSalary": "$95,000",
+      "timeToJob": "8-12 months",
+      "demandLevel": "High",
+      "levels": {
+        "beginner": {
+          "label": "Beginner",
+          "description": "Starting your backend development journey",
+          "totalSkills": 12,
+          "roadmap": [
+            { "id": "be-b-1", "step": 1, "title": "Programming Fundamentals", "description": "Master Python or JavaScript basics: data structures, algorithms, OOP, and problem solving.", "duration": "3-4 weeks", "resources": ["Python.org", "CS50", "Automate The Boring Stuff"], "skills": ["Python", "Algorithms", "OOP", "Data Structures"], "category": "Core" },
+            { "id": "be-b-2", "step": 2, "title": "Web Basics & HTTP", "description": "Understand how the web works, HTTP methods, status codes, headers, and REST principles.", "duration": "1 week", "resources": ["MDN HTTP", "REST Tutorial", "HTTP Made Simple"], "skills": ["HTTP", "REST", "APIs", "Headers"], "category": "Core" },
+            { "id": "be-b-3", "step": 3, "title": "Node.js & Express", "description": "Build servers with Node.js, create REST APIs with Express, handle middleware and routing.", "duration": "3-4 weeks", "resources": ["Node.js Docs", "Express.js Docs", "The Odin Project"], "skills": ["Node.js", "Express", "REST API"], "category": "Framework" },
+            { "id": "be-b-4", "step": 4, "title": "Databases (SQL)", "description": "Learn SQL fundamentals, MySQL/PostgreSQL, CRUD operations, joins, and indexing.", "duration": "2-3 weeks", "resources": ["PostgreSQL Docs", "SQLZoo", "Mode Analytics"], "skills": ["SQL", "PostgreSQL", "CRUD", "Joins"], "category": "Database" },
+            { "id": "be-b-5", "step": 5, "title": "Authentication & Security", "description": "Implement JWT, OAuth, bcrypt password hashing, CORS, and basic security practices.", "duration": "2 weeks", "resources": ["JWT.io", "Passport.js Docs", "OWASP"], "skills": ["JWT", "OAuth", "Security", "Bcrypt"], "category": "Security" },
+            { "id": "be-b-6", "step": 6, "title": "Deploy Your First API", "description": "Deploy Node.js APIs to Railway, Render, or Heroku with environment variables and databases.", "duration": "1 week", "resources": ["Railway Docs", "Render Docs", "Heroku Docs"], "skills": ["Deployment", "Environment Variables", "Cloud"], "category": "DevOps" }
+          ],
+          "requiredSkills": ["Python", "Node.js", "Express", "SQL", "PostgreSQL", "REST API", "JWT", "HTTP", "Git", "Deployment", "Authentication", "Security"]
+        },
+        "intermediate": {
+          "label": "Intermediate",
+          "description": "Building production-grade backends",
+          "totalSkills": 16,
+          "roadmap": [
+            { "id": "be-i-1", "step": 1, "title": "Advanced Node.js", "description": "Event loop, streams, clustering, worker threads, and high-performance Node.js patterns.", "duration": "2-3 weeks", "resources": ["NodeJS Design Patterns", "Node.js Best Practices", "Streams"], "skills": ["Event Loop", "Streams", "Clustering"], "category": "Advanced" },
+            { "id": "be-i-2", "step": 2, "title": "NoSQL Databases", "description": "MongoDB, Redis for caching, database design patterns, and when to use SQL vs NoSQL.", "duration": "2 weeks", "resources": ["MongoDB University", "Redis Docs", "Mongoose"], "skills": ["MongoDB", "Redis", "NoSQL", "Mongoose"], "category": "Database" },
+            { "id": "be-i-3", "step": 3, "title": "GraphQL APIs", "description": "Design and build GraphQL schemas, resolvers, mutations, subscriptions, and Apollo Server.", "duration": "2-3 weeks", "resources": ["GraphQL Docs", "Apollo Server", "How to GraphQL"], "skills": ["GraphQL", "Apollo", "Schema Design"], "category": "API" },
+            { "id": "be-i-4", "step": 4, "title": "Microservices Architecture", "description": "Build distributed systems with microservices, message queues, Docker, and API gateways.", "duration": "3-4 weeks", "resources": ["Microservices.io", "RabbitMQ Docs", "Docker Docs"], "skills": ["Microservices", "Docker", "Message Queues"], "category": "Architecture" },
+            { "id": "be-i-5", "step": 5, "title": "Testing & Documentation", "description": "Unit testing with Jest, integration testing, API documentation with Swagger/OpenAPI.", "duration": "2 weeks", "resources": ["Jest Docs", "Swagger UI", "Postman"], "skills": ["Jest", "Swagger", "API Testing"], "category": "Quality" },
+            { "id": "be-i-6", "step": 6, "title": "DevOps Basics", "description": "Learn Docker, Kubernetes basics, CI/CD pipelines, and cloud deployments on AWS/GCP.", "duration": "3 weeks", "resources": ["Docker Docs", "Kubernetes Basics", "AWS Free Tier"], "skills": ["Docker", "Kubernetes", "CI/CD", "AWS"], "category": "DevOps" }
+          ],
+          "requiredSkills": ["Node.js", "MongoDB", "Redis", "GraphQL", "Docker", "Microservices", "AWS", "CI/CD", "Jest", "Swagger", "Streams", "Message Queues", "Kubernetes", "PostgreSQL", "Authentication", "API Design"]
+        },
+        "advanced": {
+          "label": "Advanced",
+          "description": "Mastering backend architecture at scale",
+          "totalSkills": 20,
+          "roadmap": [
+            { "id": "be-a-1", "step": 1, "title": "System Design", "description": "Design scalable systems, load balancing, CAP theorem, consistency models, sharding.", "duration": "4-6 weeks", "resources": ["System Design Primer", "Designing Data-Intensive Applications", "ByteByteGo"], "skills": ["System Design", "Load Balancing", "Sharding"], "category": "Architecture" },
+            { "id": "be-a-2", "step": 2, "title": "Advanced Security", "description": "Penetration testing basics, OWASP Top 10, data encryption, and security audits.", "duration": "2-3 weeks", "resources": ["OWASP", "Security Engineering", "Bug Bounty"], "skills": ["Security Audits", "Encryption", "OWASP"], "category": "Security" },
+            { "id": "be-a-3", "step": 3, "title": "Observability & Monitoring", "description": "Set up logging, tracing, metrics with ELK Stack, Prometheus, Grafana, and alerts.", "duration": "2 weeks", "resources": ["ELK Stack Docs", "Prometheus Docs", "Grafana"], "skills": ["Prometheus", "Grafana", "ELK Stack", "Monitoring"], "category": "Ops" },
+            { "id": "be-a-4", "step": 4, "title": "Cloud Architecture", "description": "Design cloud-native applications on AWS/GCP/Azure with serverless and managed services.", "duration": "3-4 weeks", "resources": ["AWS Solutions Architect", "GCP Professional", "Azure Fundamentals"], "skills": ["AWS", "GCP", "Serverless", "Cloud Native"], "category": "Cloud" },
+            { "id": "be-a-5", "step": 5, "title": "Performance Engineering", "description": "Database query optimization, caching strategies, connection pooling, and profiling.", "duration": "2 weeks", "resources": ["Use The Index Luke", "Redis Patterns", "PostgreSQL Performance"], "skills": ["Query Optimization", "Caching", "Profiling"], "category": "Performance" }
+          ],
+          "requiredSkills": ["System Design", "Load Balancing", "Sharding", "Security Audits", "Prometheus", "Grafana", "AWS", "GCP", "Serverless", "Query Optimization", "Caching", "Kubernetes", "Event-Driven", "CQRS", "Domain-Driven Design", "Terraform", "Observability", "Distributed Systems", "CAP Theorem", "Performance Engineering"]
+        }
+      }
+    },
+    "datascience": {
+      "title": "Data Scientist",
+      "icon": "📊",
+      "color": "#f59e0b",
+      "difficulty": "Hard",
+      "avgSalary": "$110,000",
+      "timeToJob": "10-14 months",
+      "demandLevel": "Very High",
+      "levels": {
+        "beginner": {
+          "label": "Beginner",
+          "description": "Entering the data science world",
+          "totalSkills": 12,
+          "roadmap": [
+            { "id": "ds-b-1", "step": 1, "title": "Python for Data Science", "description": "Python basics, NumPy, Pandas for data manipulation, and Jupyter notebooks.", "duration": "3-4 weeks", "resources": ["Python Data Science Handbook", "Kaggle Learn", "Fast.ai"], "skills": ["Python", "NumPy", "Pandas", "Jupyter"], "category": "Core" },
+            { "id": "ds-b-2", "step": 2, "title": "Statistics & Probability", "description": "Descriptive statistics, probability distributions, hypothesis testing, and statistical inference.", "duration": "3-4 weeks", "resources": ["StatQuest", "Think Stats", "Khan Academy Stats"], "skills": ["Statistics", "Probability", "Hypothesis Testing"], "category": "Math" },
+            { "id": "ds-b-3", "step": 3, "title": "Data Visualization", "description": "Create compelling charts with Matplotlib, Seaborn, and Plotly for data storytelling.", "duration": "2 weeks", "resources": ["Matplotlib Docs", "Seaborn Tutorial", "Plotly Express"], "skills": ["Matplotlib", "Seaborn", "Visualization"], "category": "Visualization" },
+            { "id": "ds-b-4", "step": 4, "title": "SQL for Data Analysis", "description": "Write complex SQL queries, window functions, CTEs, and analyze datasets.", "duration": "2-3 weeks", "resources": ["Mode SQL Tutorial", "SQLZoo", "LeetCode SQL"], "skills": ["SQL", "Data Analysis", "Window Functions"], "category": "Database" },
+            { "id": "ds-b-5", "step": 5, "title": "Machine Learning Basics", "description": "Supervised learning, linear/logistic regression, decision trees with Scikit-learn.", "duration": "4-5 weeks", "resources": ["Scikit-learn Docs", "StatQuest ML", "Hands-On ML Book"], "skills": ["Scikit-learn", "Regression", "Classification"], "category": "ML" },
+            { "id": "ds-b-6", "step": 6, "title": "First EDA Projects", "description": "Complete Exploratory Data Analysis projects on Kaggle datasets and document findings.", "duration": "2-3 weeks", "resources": ["Kaggle Datasets", "MadeWithML", "Towards Data Science"], "skills": ["EDA", "Data Cleaning", "Storytelling"], "category": "Practice" }
+          ],
+          "requiredSkills": ["Python", "NumPy", "Pandas", "Statistics", "SQL", "Matplotlib", "Seaborn", "Scikit-learn", "Regression", "EDA", "Jupyter", "Data Cleaning"]
+        },
+        "intermediate": {
+          "label": "Intermediate",
+          "description": "Building real ML solutions",
+          "totalSkills": 16,
+          "roadmap": [
+            { "id": "ds-i-1", "step": 1, "title": "Advanced Machine Learning", "description": "Ensemble methods, SVM, clustering algorithms, feature engineering, and model selection.", "duration": "4-5 weeks", "resources": ["Scikit-learn Advanced", "Feature Engineering Book", "Kaggle"], "skills": ["Random Forest", "SVM", "Clustering", "Feature Engineering"], "category": "ML" },
+            { "id": "ds-i-2", "step": 2, "title": "Deep Learning Foundations", "description": "Neural networks, CNNs, RNNs with TensorFlow/Keras or PyTorch.", "duration": "4-6 weeks", "resources": ["Deep Learning Specialization", "fast.ai", "PyTorch Docs"], "skills": ["Neural Networks", "CNN", "RNN", "PyTorch"], "category": "DL" },
+            { "id": "ds-i-3", "step": 3, "title": "Natural Language Processing", "description": "Text processing, sentiment analysis, transformers, and Hugging Face ecosystem.", "duration": "3-4 weeks", "resources": ["Hugging Face Course", "NLP with Transformers", "NLTK"], "skills": ["NLP", "Transformers", "BERT", "Sentiment Analysis"], "category": "NLP" },
+            { "id": "ds-i-4", "step": 4, "title": "MLOps & Model Deployment", "description": "Deploy models with FastAPI, MLflow for tracking, Docker, and CI/CD for ML pipelines.", "duration": "3 weeks", "resources": ["MLflow Docs", "FastAPI", "Made With ML"], "skills": ["MLOps", "FastAPI", "MLflow", "Model Deployment"], "category": "Deployment" },
+            { "id": "ds-i-5", "step": 5, "title": "Big Data Tools", "description": "Spark, Hadoop basics, cloud data warehouses (BigQuery, Redshift), and data pipelines.", "duration": "3-4 weeks", "resources": ["Spark Documentation", "BigQuery Docs", "Airflow"], "skills": ["Spark", "BigQuery", "Data Pipelines", "Airflow"], "category": "Big Data" }
+          ],
+          "requiredSkills": ["Random Forest", "SVM", "Neural Networks", "PyTorch", "NLP", "BERT", "MLflow", "FastAPI", "Spark", "BigQuery", "Feature Engineering", "Cross-Validation", "Model Deployment", "Airflow", "A/B Testing", "Statistics"]
+        },
+        "advanced": {
+          "label": "Advanced",
+          "description": "Cutting-edge AI research and production ML",
+          "totalSkills": 20,
+          "roadmap": [
+            { "id": "ds-a-1", "step": 1, "title": "Generative AI & LLMs", "description": "Fine-tuning LLMs, prompt engineering, RAG systems, LangChain, and AI agent development.", "duration": "4-6 weeks", "resources": ["LangChain Docs", "OpenAI Cookbook", "Hugging Face PEFT"], "skills": ["LLMs", "RAG", "Fine-tuning", "LangChain"], "category": "GenAI" },
+            { "id": "ds-a-2", "step": 2, "title": "Research & Publications", "description": "Read and implement SOTA papers, contribute to research, write technical blogs.", "duration": "Ongoing", "resources": ["ArXiv", "Papers With Code", "Semantic Scholar"], "skills": ["Research", "Paper Implementation", "Technical Writing"], "category": "Research" },
+            { "id": "ds-a-3", "step": 3, "title": "ML System Design", "description": "Design ML systems at scale, real-time inference, feature stores, and data governance.", "duration": "4 weeks", "resources": ["Designing ML Systems", "ML System Design", "Feature Store"], "skills": ["ML System Design", "Feature Store", "Real-time ML"], "category": "Architecture" }
+          ],
+          "requiredSkills": ["LLMs", "RAG", "Fine-tuning", "LangChain", "Reinforcement Learning", "Computer Vision", "GANs", "Research", "ML System Design", "Feature Store", "Real-time ML", "Distributed Training", "CUDA", "Triton", "Experiment Tracking", "Data Governance", "Ethics in AI", "Causal Inference", "Time Series", "Anomaly Detection"]
+        }
+      }
+    },
+    "devops": {
+      "title": "DevOps Engineer",
+      "icon": "🔧",
+      "color": "#ef4444",
+      "difficulty": "Hard",
+      "avgSalary": "$105,000",
+      "timeToJob": "10-14 months",
+      "demandLevel": "High",
+      "levels": {
+        "beginner": {
+          "label": "Beginner",
+          "description": "Starting your DevOps journey",
+          "totalSkills": 12,
+          "roadmap": [
+            { "id": "dv-b-1", "step": 1, "title": "Linux & Shell Scripting", "description": "Master Linux commands, bash scripting, file permissions, process management, and cron jobs.", "duration": "3-4 weeks", "resources": ["Linux Journey", "The Linux Command Line", "Over the Wire"], "skills": ["Linux", "Bash", "Shell Scripting", "Cron"], "category": "OS" },
+            { "id": "dv-b-2", "step": 2, "title": "Networking Fundamentals", "description": "TCP/IP, DNS, HTTP/HTTPS, load balancing concepts, firewalls, and SSL/TLS.", "duration": "2-3 weeks", "resources": ["Computer Networking: A Top-Down Approach", "Professor Messer", "Cloudflare Learning"], "skills": ["TCP/IP", "DNS", "HTTP", "Networking"], "category": "Infrastructure" },
+            { "id": "dv-b-3", "step": 3, "title": "Git & Version Control", "description": "Advanced Git workflows, branching strategies, GitFlow, and monorepo management.", "duration": "1-2 weeks", "resources": ["Pro Git Book", "GitHub Flow", "Trunk Based Development"], "skills": ["Git", "GitFlow", "Branching Strategies"], "category": "Tools" },
+            { "id": "dv-b-4", "step": 4, "title": "Docker & Containers", "description": "Build Docker images, write Dockerfiles, Docker Compose, and container networking.", "duration": "2-3 weeks", "resources": ["Docker Docs", "Docker for Beginners", "Play with Docker"], "skills": ["Docker", "Containers", "Docker Compose"], "category": "Containers" },
+            { "id": "dv-b-5", "step": 5, "title": "CI/CD Pipelines", "description": "Build automated pipelines with GitHub Actions, Jenkins, and GitLab CI for testing and deployment.", "duration": "2-3 weeks", "resources": ["GitHub Actions Docs", "Jenkins Tutorial", "GitLab CI"], "skills": ["GitHub Actions", "CI/CD", "Jenkins"], "category": "Automation" },
+            { "id": "dv-b-6", "step": 6, "title": "Cloud Basics (AWS)", "description": "AWS fundamentals: EC2, S3, VPC, IAM, RDS, and basic infrastructure setup.", "duration": "3-4 weeks", "resources": ["AWS Free Tier", "AWS Cloud Practitioner", "A Cloud Guru"], "skills": ["AWS", "EC2", "S3", "IAM", "VPC"], "category": "Cloud" }
+          ],
+          "requiredSkills": ["Linux", "Bash", "Docker", "Git", "CI/CD", "AWS", "Networking", "TCP/IP", "Containers", "GitHub Actions", "VPC", "IAM"]
+        },
+        "intermediate": {
+          "label": "Intermediate",
+          "description": "Building production infrastructure",
+          "totalSkills": 16,
+          "roadmap": [
+            { "id": "dv-i-1", "step": 1, "title": "Kubernetes", "description": "Kubernetes architecture, pods, deployments, services, Helm charts, and cluster management.", "duration": "4-6 weeks", "resources": ["Kubernetes Docs", "KodeKloud", "CKAD Prep"], "skills": ["Kubernetes", "Helm", "Pods", "Services"], "category": "Orchestration" },
+            { "id": "dv-i-2", "step": 2, "title": "Infrastructure as Code", "description": "Terraform, Ansible, and Pulumi for provisioning and managing cloud infrastructure.", "duration": "3-4 weeks", "resources": ["Terraform Docs", "Ansible Docs", "HashiCorp Learn"], "skills": ["Terraform", "Ansible", "IaC"], "category": "IaC" },
+            { "id": "dv-i-3", "step": 3, "title": "Monitoring & Observability", "description": "Set up Prometheus, Grafana dashboards, ELK stack, distributed tracing with Jaeger.", "duration": "2-3 weeks", "resources": ["Prometheus Docs", "Grafana Docs", "OpenTelemetry"], "skills": ["Prometheus", "Grafana", "ELK", "Observability"], "category": "Monitoring" },
+            { "id": "dv-i-4", "step": 4, "title": "Security (DevSecOps)", "description": "Security scanning, secrets management with Vault, SAST/DAST, and compliance automation.", "duration": "2-3 weeks", "resources": ["HashiCorp Vault", "OWASP DevSecOps", "Snyk Docs"], "skills": ["Vault", "SAST", "DAST", "Secrets Management"], "category": "Security" },
+            { "id": "dv-i-5", "step": 5, "title": "Service Mesh", "description": "Istio, Linkerd, traffic management, mutual TLS, and observability in microservices.", "duration": "2-3 weeks", "resources": ["Istio Docs", "Linkerd Docs", "Service Mesh Patterns"], "skills": ["Istio", "Service Mesh", "mTLS"], "category": "Advanced" }
+          ],
+          "requiredSkills": ["Kubernetes", "Terraform", "Ansible", "Prometheus", "Grafana", "ELK", "Vault", "Istio", "Helm", "AWS Advanced", "GitOps", "ArgoCD", "Security Scanning", "Chaos Engineering", "Cost Optimization", "SRE Practices"]
+        },
+        "advanced": {
+          "label": "Advanced",
+          "description": "Leading platform engineering teams",
+          "totalSkills": 20,
+          "roadmap": [
+            { "id": "dv-a-1", "step": 1, "title": "Platform Engineering", "description": "Build Internal Developer Platforms, golden paths, and developer experience tooling.", "duration": "4-6 weeks", "resources": ["Platform Engineering", "Backstage.io", "Humanitec"], "skills": ["Platform Engineering", "IDP", "Backstage"], "category": "Platform" },
+            { "id": "dv-a-2", "step": 2, "title": "SRE Practices", "description": "SLIs/SLOs/SLAs, error budgets, incident management, chaos engineering, and reliability.", "duration": "3-4 weeks", "resources": ["Google SRE Book", "Site Reliability Workbook", "Chaos Monkey"], "skills": ["SRE", "Error Budgets", "Incident Management"], "category": "Reliability" }
+          ],
+          "requiredSkills": ["Platform Engineering", "SRE", "Chaos Engineering", "FinOps", "Multi-Cloud", "Service Mesh Advanced", "GitOps", "Supply Chain Security", "eBPF", "Custom Operators", "Cluster API", "OPA", "Policy as Code", "SBOM", "Zero Trust", "Compliance Automation", "Cost Engineering", "Reliability Engineering", "Observability Platform", "Developer Experience"]
+        }
+      }
+    },
+    "fullstack": {
+      "title": "Full Stack Developer",
+      "icon": "🚀",
+      "color": "#8b5cf6",
+      "difficulty": "Hard",
+      "avgSalary": "$100,000",
+      "timeToJob": "10-14 months",
+      "demandLevel": "Very High",
+      "levels": {
+        "beginner": {
+          "label": "Beginner",
+          "description": "Learning both frontend and backend basics",
+          "totalSkills": 14,
+          "roadmap": [
+            { "id": "fs-b-1", "step": 1, "title": "HTML, CSS & JavaScript", "description": "Complete frontend fundamentals with HTML5, CSS3, and vanilla JavaScript.", "duration": "4-6 weeks", "resources": ["The Odin Project", "freeCodeCamp", "MDN"], "skills": ["HTML5", "CSS3", "JavaScript", "DOM"], "category": "Frontend" },
+            { "id": "fs-b-2", "step": 2, "title": "Node.js & Express APIs", "description": "Build backend servers with Node.js and create RESTful APIs with Express.", "duration": "3-4 weeks", "resources": ["Node.js Docs", "Express Docs", "The Odin Project"], "skills": ["Node.js", "Express", "REST API"], "category": "Backend" },
+            { "id": "fs-b-3", "step": 3, "title": "Databases (SQL + NoSQL)", "description": "Learn PostgreSQL for relational data and MongoDB for document storage.", "duration": "3-4 weeks", "resources": ["PostgreSQL Tutorial", "MongoDB University", "Mongoose"], "skills": ["PostgreSQL", "MongoDB", "SQL", "NoSQL"], "category": "Database" },
+            { "id": "fs-b-4", "step": 4, "title": "React Front-end", "description": "Build dynamic UIs with React, hooks, and connect to your Express backend.", "duration": "3-4 weeks", "resources": ["React Docs", "Scrimba", "Full Stack Open"], "skills": ["React", "Hooks", "Fetch API"], "category": "Frontend" },
+            { "id": "fs-b-5", "step": 5, "title": "Authentication & Deployment", "description": "Implement JWT auth and deploy full-stack apps to cloud platforms.", "duration": "2-3 weeks", "resources": ["JWT.io", "Railway Docs", "Render.com"], "skills": ["JWT", "Authentication", "Deployment"], "category": "Security" },
+            { "id": "fs-b-6", "step": 6, "title": "Build CRUD Applications", "description": "Create complete CRUD apps with user auth, database, and responsive UI.", "duration": "3-4 weeks", "resources": ["Full Stack Open", "Frontend Mentor", "Vercel"], "skills": ["CRUD", "Full Stack", "Project Building"], "category": "Practice" }
+          ],
+          "requiredSkills": ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "Express", "PostgreSQL", "MongoDB", "JWT", "REST API", "Git", "Deployment", "SQL", "Authentication"]
+        },
+        "intermediate": {
+          "label": "Intermediate",
+          "description": "Building scalable full-stack applications",
+          "totalSkills": 18,
+          "roadmap": [
+            { "id": "fs-i-1", "step": 1, "title": "Next.js Full-Stack", "description": "Next.js App Router, API routes, server/client components, and full-stack capabilities.", "duration": "3-4 weeks", "resources": ["Next.js Docs", "Vercel Learn", "Lee Robinson"], "skills": ["Next.js", "App Router", "Server Components"], "category": "Framework" },
+            { "id": "fs-i-2", "step": 2, "title": "TypeScript", "description": "Add type safety across entire stack with TypeScript, generics, and strict configurations.", "duration": "2-3 weeks", "resources": ["TypeScript Docs", "Total TypeScript", "Matt Pocock"], "skills": ["TypeScript", "Type Safety", "Generics"], "category": "Language" },
+            { "id": "fs-i-3", "step": 3, "title": "Advanced State & Data Fetching", "description": "TanStack Query, Zustand, SWR, and optimistic updates for production applications.", "duration": "2 weeks", "resources": ["TanStack Query Docs", "Zustand", "SWR Docs"], "skills": ["TanStack Query", "Zustand", "SWR"], "category": "State" },
+            { "id": "fs-i-4", "step": 4, "title": "Testing Full Stack", "description": "End-to-end testing with Playwright/Cypress, API testing, and frontend unit tests.", "duration": "2-3 weeks", "resources": ["Playwright Docs", "Cypress Docs", "Vitest"], "skills": ["Playwright", "Cypress", "E2E Testing"], "category": "Quality" },
+            { "id": "fs-i-5", "step": 5, "title": "Performance & Optimization", "description": "Next.js optimizations, image optimization, caching, and Core Web Vitals.", "duration": "2 weeks", "resources": ["Next.js Optimization", "Web.dev", "Bundle Analyzer"], "skills": ["Performance", "Caching", "Core Web Vitals"], "category": "Performance" }
+          ],
+          "requiredSkills": ["Next.js", "TypeScript", "TanStack Query", "Zustand", "Playwright", "Redis", "GraphQL", "Docker", "CI/CD", "Performance", "App Router", "Server Actions", "Prisma", "Authentication", "tRPC", "Testing", "Core Web Vitals", "Database Design"]
+        },
+        "advanced": {
+          "label": "Advanced",
+          "description": "Architecting large-scale full-stack systems",
+          "totalSkills": 20,
+          "roadmap": [
+            { "id": "fs-a-1", "step": 1, "title": "Scalable Architecture", "description": "Monorepo architecture, micro-frontends, BFF pattern, and design systems.", "duration": "4 weeks", "resources": ["Turborepo", "Module Federation", "Storybook"], "skills": ["Monorepo", "Micro-Frontend", "Design System"], "category": "Architecture" },
+            { "id": "fs-a-2", "step": 2, "title": "Real-time & Event-Driven", "description": "WebSockets, Server-Sent Events, event sourcing, CQRS, and message brokers.", "duration": "3 weeks", "resources": ["Socket.io Docs", "Kafka Docs", "Event Sourcing"], "skills": ["WebSockets", "Kafka", "CQRS", "Event Sourcing"], "category": "Real-time" }
+          ],
+          "requiredSkills": ["Monorepo", "Micro-Frontend", "WebSockets", "Kafka", "CQRS", "Event Sourcing", "Multi-tenancy", "Observability", "Security Hardening", "Cost Optimization", "Global Deployment", "Edge Computing", "CDN Strategy", "Database Sharding", "API Gateway", "Rate Limiting", "Feature Flags", "A/B Testing", "Documentation", "Tech Leadership"]
+        }
+      }
+    }
+  },
+  "projects": {
+    "frontend": {
+      "beginner": [
+        { "id": "p1", "title": "Personal Portfolio Website", "description": "Build a stunning portfolio with HTML, CSS animations, and JS interactions. Include hero section, projects grid, and contact form.", "difficulty": "Easy", "duration": "1 week", "skills": ["HTML5", "CSS3", "JavaScript"], "githubIdea": "portfolio-v1" },
+        { "id": "p2", "title": "Weather App", "description": "Fetch real weather data from OpenWeatherMap API. Show current weather, 5-day forecast with animated icons.", "difficulty": "Easy-Medium", "duration": "3-5 days", "skills": ["JavaScript", "APIs", "CSS3"], "githubIdea": "weather-app" },
+        { "id": "p3", "title": "To-Do List App", "description": "Full-featured task manager with local storage, categories, priority levels, and drag-and-drop reordering.", "difficulty": "Easy", "duration": "3-4 days", "skills": ["JavaScript", "DOM", "Local Storage"], "githubIdea": "todo-app" }
+      ],
+      "intermediate": [
+        { "id": "p4", "title": "E-commerce Product Page", "description": "React-based product page with cart, filtering, search, infinite scroll, and Stripe-like checkout flow.", "difficulty": "Medium", "duration": "2 weeks", "skills": ["React", "Redux", "REST API"], "githubIdea": "ecommerce-react" },
+        { "id": "p5", "title": "Real-time Chat UI", "description": "Messenger-like chat interface with React, WebSocket connection, emoji picker, and typing indicators.", "difficulty": "Medium", "duration": "1-2 weeks", "skills": ["React", "WebSockets", "Hooks"], "githubIdea": "chat-ui-react" },
+        { "id": "p6", "title": "Dashboard Analytics App", "description": "Admin dashboard with Chart.js/D3 visualizations, data tables, dark mode, and responsive layout.", "difficulty": "Medium-Hard", "duration": "2-3 weeks", "skills": ["React", "Chart.js", "REST API"], "githubIdea": "analytics-dashboard" }
+      ],
+      "advanced": [
+        { "id": "p7", "title": "Design System & Component Library", "description": "Build a complete design system with Storybook, accessibility, TypeScript, and npm publishing.", "difficulty": "Hard", "duration": "3-4 weeks", "skills": ["React", "TypeScript", "Storybook"], "githubIdea": "design-system" },
+        { "id": "p8", "title": "Next.js SaaS Starter", "description": "Full-featured SaaS boilerplate with auth, subscriptions, admin panel, multi-tenancy, and Stripe integration.", "difficulty": "Very Hard", "duration": "4-6 weeks", "skills": ["Next.js", "TypeScript", "Stripe"], "githubIdea": "nextjs-saas" }
+      ]
+    },
+    "backend": {
+      "beginner": [
+        { "id": "p9", "title": "REST API with Authentication", "description": "Build a complete REST API with user registration, login, JWT tokens, and protected routes.", "difficulty": "Easy-Medium", "duration": "1 week", "skills": ["Node.js", "Express", "JWT"], "githubIdea": "rest-api-auth" },
+        { "id": "p10", "title": "URL Shortener", "description": "URL shortening service with custom slugs, click tracking, analytics, and Redis caching.", "difficulty": "Easy", "duration": "3-5 days", "skills": ["Node.js", "PostgreSQL", "Redis"], "githubIdea": "url-shortener" }
+      ],
+      "intermediate": [
+        { "id": "p11", "title": "Real-time Notification System", "description": "Push notification service using WebSockets, message queues, email notification, and dashboard.", "difficulty": "Medium-Hard", "duration": "2-3 weeks", "skills": ["Node.js", "Redis", "WebSockets"], "githubIdea": "notification-system" },
+        { "id": "p12", "title": "File Upload & Processing Service", "description": "Multi-file upload system with image processing, S3 storage, CDN delivery, and metadata extraction.", "difficulty": "Medium", "duration": "1-2 weeks", "skills": ["Node.js", "AWS S3", "Sharp"], "githubIdea": "file-upload-service" }
+      ],
+      "advanced": [
+        { "id": "p13", "title": "Distributed Task Queue", "description": "Build a Bull/BullMQ-based job queue with priorities, retries, rate limiting, and monitoring dashboard.", "difficulty": "Hard", "duration": "3-4 weeks", "skills": ["Node.js", "Redis", "Docker"], "githubIdea": "task-queue" }
+      ]
+    },
+    "datascience": {
+      "beginner": [
+        { "id": "p14", "title": "EDA on Titanic Dataset", "description": "Complete exploratory analysis with survival prediction, beautiful visualizations, and statistical insights.", "difficulty": "Easy", "duration": "3-5 days", "skills": ["Python", "Pandas", "Matplotlib"], "githubIdea": "titanic-eda" },
+        { "id": "p15", "title": "Movie Recommendation System", "description": "Content-based and collaborative filtering recommendation engine using MovieLens dataset.", "difficulty": "Medium", "duration": "1 week", "skills": ["Python", "Scikit-learn", "Pandas"], "githubIdea": "movie-recommender" }
+      ],
+      "intermediate": [
+        { "id": "p16", "title": "Sentiment Analysis API", "description": "Real-time sentiment analysis API with transformer models, FastAPI, Redis caching, and monitoring.", "difficulty": "Medium-Hard", "duration": "2-3 weeks", "skills": ["PyTorch", "FastAPI", "NLP"], "githubIdea": "sentiment-api" },
+        { "id": "p17", "title": "Stock Price Predictor", "description": "LSTM-based stock prediction with technical indicators, backtesting engine, and Streamlit dashboard.", "difficulty": "Hard", "duration": "2-3 weeks", "skills": ["PyTorch", "Pandas", "Streamlit"], "githubIdea": "stock-predictor" }
+      ],
+      "advanced": [
+        { "id": "p18", "title": "AI Chat Application with RAG", "description": "LLM-powered Q&A over custom documents using LangChain, vector database, and streaming responses.", "difficulty": "Very Hard", "duration": "3-4 weeks", "skills": ["LangChain", "LLMs", "Pinecone"], "githubIdea": "rag-chatbot" }
+      ]
+    },
+    "devops": {
+      "beginner": [
+        { "id": "p19", "title": "Dockerized Multi-Service App", "description": "Containerize a full-stack app with Docker Compose, multi-stage builds, and health checks.", "difficulty": "Easy-Medium", "duration": "1 week", "skills": ["Docker", "Bash", "Networking"], "githubIdea": "docker-compose-app" },
+        { "id": "p20", "title": "CI/CD Pipeline Setup", "description": "Build automated GitHub Actions pipeline with testing, linting, Docker builds, and deployment to cloud.", "difficulty": "Medium", "duration": "3-5 days", "skills": ["GitHub Actions", "Docker", "CI/CD"], "githubIdea": "cicd-pipeline" }
+      ],
+      "intermediate": [
+        { "id": "p21", "title": "Kubernetes Cluster Setup", "description": "Deploy a microservices app on Kubernetes with Helm charts, autoscaling, and monitoring.", "difficulty": "Hard", "duration": "2-3 weeks", "skills": ["Kubernetes", "Helm", "Prometheus"], "githubIdea": "k8s-microservices" }
+      ],
+      "advanced": [
+        { "id": "p22", "title": "Internal Developer Platform", "description": "Build IDP with Backstage.io, self-service infrastructure, golden paths, and developer portal.", "difficulty": "Very Hard", "duration": "4-6 weeks", "skills": ["Backstage", "Terraform", "Kubernetes"], "githubIdea": "internal-dev-platform" }
+      ]
+    },
+    "fullstack": {
+      "beginner": [
+        { "id": "p23", "title": "Blog Platform", "description": "Full-stack blog with user auth, rich text editor, comments, likes, and responsive design.", "difficulty": "Medium", "duration": "2 weeks", "skills": ["React", "Node.js", "MongoDB"], "githubIdea": "blog-platform" },
+        { "id": "p24", "title": "Social Media Clone", "description": "Twitter/Instagram-like app with posts, follows, real-time feed, image uploads, and notifications.", "difficulty": "Medium-Hard", "duration": "3-4 weeks", "skills": ["React", "Node.js", "Socket.io"], "githubIdea": "social-media-clone" }
+      ],
+      "intermediate": [
+        { "id": "p25", "title": "Project Management Tool", "description": "Jira/Trello clone with boards, drag-and-drop tasks, team collaboration, and real-time updates.", "difficulty": "Hard", "duration": "4-5 weeks", "skills": ["Next.js", "TypeScript", "PostgreSQL"], "githubIdea": "project-management" }
+      ],
+      "advanced": [
+        { "id": "p26", "title": "SaaS Multi-tenant Platform", "description": "Complete SaaS with multi-tenancy, billing, admin portal, API rate limiting, and white-labeling.", "difficulty": "Very Hard", "duration": "6-8 weeks", "skills": ["Next.js", "TypeScript", "Stripe"], "githubIdea": "saas-platform" }
+      ]
+    }
+  },
+  "badges": [
+    { "id": "first-step", "name": "First Step", "icon": "🎯", "description": "Completed your first roadmap step", "threshold": 1, "type": "steps", "color": "#6366f1" },
+    { "id": "quarter-done", "name": "Quarter Way", "icon": "⚡", "description": "Reached 25% completion", "threshold": 25, "type": "progress", "color": "#f59e0b" },
+    { "id": "halfway-hero", "name": "Halfway Hero", "icon": "🔥", "description": "Reached 50% completion", "threshold": 50, "type": "progress", "color": "#ef4444" },
+    { "id": "almost-there", "name": "Almost There", "icon": "🚀", "description": "Reached 75% completion", "threshold": 75, "type": "progress", "color": "#10b981" },
+    { "id": "job-ready", "name": "Job Ready!", "icon": "👑", "description": "100% roadmap completion - you're job ready!", "threshold": 100, "type": "progress", "color": "#f59e0b" },
+    { "id": "skill-master", "name": "Skill Master", "icon": "🧠", "description": "Completed 10 skills", "threshold": 10, "type": "skills", "color": "#8b5cf6" },
+    { "id": "project-builder", "name": "Project Builder", "icon": "🏗️", "description": "Started your first project", "threshold": 1, "type": "projects", "color": "#06b6d4" },
+    { "id": "streak-3", "name": "3-Day Streak", "icon": "💫", "description": "Logged in 3 days in a row", "threshold": 3, "type": "streak", "color": "#f59e0b" },
+    { "id": "streak-7", "name": "Week Warrior", "icon": "⚔️", "description": "Logged in 7 days in a row", "threshold": 7, "type": "streak", "color": "#ef4444" },
+    { "id": "level-up", "name": "Level Up!", "icon": "🌟", "description": "Advanced to Intermediate level", "threshold": 1, "type": "level", "color": "#6366f1" }
+  ],
+  "aiResponses": {
+    "greetings": [
+      "Hello! I'm your AI career advisor. How can I help you today?",
+      "Hi there! Ready to accelerate your tech career? Ask me anything!",
+      "Hey! I'm here to guide you on your learning journey. What's on your mind?"
+    ],
+    "progress": {
+      "low": ["You're just getting started — consistency is key! Try to learn for at least 1 hour daily.", "Everyone starts somewhere. Focus on the fundamentals and build strong roots.", "Don't be discouraged! The first 25% is always the hardest. Keep going!"],
+      "mid": ["You're making great progress! You've built a solid foundation.", "Halfway there! This is where most people slow down — don't let that be you.", "Excellent work! Now is a good time to start building real projects."],
+      "high": ["Outstanding progress! You're close to job-ready status.", "You're in the top tier of learners at this stage. Start applying to jobs!", "Almost there! polish your portfolio and start networking now."]
+    },
+    "skills": ["Focus on learning [SKILL] next — it's the most in-demand skill in this area.", "Building projects with [SKILL] will accelerate your learning 3x.", "Many companies specifically require [SKILL] — make it a priority."],
+    "career": {
+      "frontend": "Frontend development is one of the most visually rewarding careers. Companies value React and Next.js expertise the most right now.",
+      "backend": "Backend development offers excellent salary growth. Node.js and Python with cloud skills (AWS/GCP) are the hottest combination.",
+      "datascience": "Data Science is booming with the AI revolution. Python, ML frameworks, and now LLM experience are highly sought after.",
+      "devops": "DevOps/Platform Engineering is critical for every company. Kubernetes and cloud certifications can significantly boost your salary.",
+      "fullstack": "Full Stack development gives you the most job opportunities. The MERN/PERN stack with TypeScript and Next.js is the gold standard."
+    }
+  },
+  "insights": {
+    "scoreRanges": {
+      "0-25": { "label": "Beginner Stage", "message": "You're at the beginning of your journey. Focus on completing the foundational steps first.", "color": "#ef4444", "emoji": "🌱" },
+      "26-50": { "label": "Building Skills", "message": "Good progress! You've built a foundation. Now focus on practical projects to solidify your knowledge.", "color": "#f59e0b", "emoji": "📚" },
+      "51-75": { "label": "Intermediate Level", "message": "You're well on your way! Focus on advanced topics and start building production-quality projects.", "color": "#6366f1", "emoji": "⚡" },
+      "76-99": { "label": "Job Ready Soon", "message": "You're almost there! Polish your portfolio, practice system design interviews, and start applying.", "color": "#10b981", "emoji": "🚀" },
+      "100": { "label": "Job Ready!", "message": "Congratulations! You've completed the roadmap. Now it's time to nail those interviews!", "color": "#f59e0b", "emoji": "👑" }
+    }
+  },
+  "skillDependencies": {
+    "frontend": {
+      "nodes": [
+        { "id": "html", "label": "HTML5", "x": 100, "y": 50 },
+        { "id": "css", "label": "CSS3", "x": 250, "y": 50 },
+        { "id": "js", "label": "JavaScript", "x": 400, "y": 50 },
+        { "id": "git", "label": "Git", "x": 175, "y": 150 },
+        { "id": "responsive", "label": "Responsive", "x": 250, "y": 150 },
+        { "id": "react", "label": "React", "x": 400, "y": 150 },
+        { "id": "ts", "label": "TypeScript", "x": 550, "y": 150 },
+        { "id": "nextjs", "label": "Next.js", "x": 475, "y": 250 },
+        { "id": "testing", "label": "Testing", "x": 325, "y": 250 },
+        { "id": "perf", "label": "Performance", "x": 250, "y": 250 }
+      ],
+      "edges": [
+        { "from": "html", "to": "css" }, { "from": "css", "to": "js" }, { "from": "html", "to": "git" },
+        { "from": "css", "to": "responsive" }, { "from": "js", "to": "react" }, { "from": "js", "to": "ts" },
+        { "from": "react", "to": "nextjs" }, { "from": "ts", "to": "nextjs" }, { "from": "react", "to": "testing" },
+        { "from": "responsive", "to": "perf" }
+      ]
+    },
+    "backend": {
+      "nodes": [
+        { "id": "python", "label": "Python/JS", "x": 100, "y": 50 },
+        { "id": "http", "label": "HTTP", "x": 250, "y": 50 },
+        { "id": "nodejs", "label": "Node.js", "x": 400, "y": 50 },
+        { "id": "sql", "label": "SQL", "x": 175, "y": 150 },
+        { "id": "nosql", "label": "NoSQL", "x": 325, "y": 150 },
+        { "id": "rest", "label": "REST API", "x": 475, "y": 150 },
+        { "id": "docker", "label": "Docker", "x": 250, "y": 250 },
+        { "id": "cloud", "label": "Cloud", "x": 400, "y": 250 },
+        { "id": "graphql", "label": "GraphQL", "x": 550, "y": 250 }
+      ],
+      "edges": [
+        { "from": "python", "to": "http" }, { "from": "http", "to": "nodejs" }, { "from": "python", "to": "sql" },
+        { "from": "nodejs", "to": "nosql" }, { "from": "nodejs", "to": "rest" }, { "from": "sql", "to": "docker" },
+        { "from": "docker", "to": "cloud" }, { "from": "rest", "to": "graphql" }
+      ]
+    }
+  }
+}
