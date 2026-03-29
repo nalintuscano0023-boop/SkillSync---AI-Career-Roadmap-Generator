@@ -3,6 +3,7 @@
 Transform your tech career aspirations into a personalized, actionable learning journey powered by AI
 
 
+☆⚠️ Best viewed on desktop/laptop for optimal experience.☆
 
 
 🌟 Overview
@@ -349,4 +350,4 @@ Acknowledgments
 
 If you found this helpful, please consider giving it a star!
 
-⚠️ Best viewed on desktop/laptop for optimal experience.
+
